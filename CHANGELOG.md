@@ -4,7 +4,34 @@ Please have a look at the [Haml Coffee Changelog](https://github.com/netzpirat/h
 
 ## Master
 
+## 1.21.0 - Jul 9th, 2022
+- [#184][]: Support for rails 7.0, and fix tests on CI.
+
+## 1.20.0 - Apr 29th, 2021
+- [#181][]: Fix supported version to Rails >= 4.2 && < 6.2, Ruby >= 2.5, 
+- [#179][]: Run test on Github Actions
+- [#180][]: Add support for Rails 6.0 and 6.1 and Sprockets 4
+- [#172][]: Fix tests with Rails 5.2 and latest rubies
+
+## 1.19.0 - Feb 23rd, 2021
+- [#169][]: Fix transformation for JST templates
+ 
+## 1.18.0 - June 23rd, 2017
+- [#164][]: Fix interop error with Rails 5.1 Template Errors
+
+## 1.17.0 - October 26, 2016
 - Update to Haml-Coffee 1.13.6
+- [#159][]: Get rid of sprockets deprecation warnings
+
+## 1.16.2 - February 25, 2016
+
+- Fixing compatibility with older versions of rails.
+- [#146][]: Incompatibility with Rails 4.2.5.1 from a change to find_templates
+
+## 1.16.1 - January 30, 2016
+
+- Change Gem dependencies.
+- [#146][]: Incompatibility with Rails 4.2.5.1 from a change to find_templates
 
 ## 1.16.0 - December 3, 2013
 

@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gemspec
+gemspec path: '..'
 
-gem "rails", github: "rails/rails"
+gem 'rails', git: 'https://github.com/mathieujobin/rails', branch: 'rails4-2-bundler-2'
 
 platform :ruby do
   gem 'therubyracer'

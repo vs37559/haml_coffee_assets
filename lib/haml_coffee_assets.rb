@@ -2,7 +2,6 @@
 
 require 'pathname'
 
-require 'tilt'
 require 'sprockets'
 require 'execjs'
 
@@ -11,15 +10,20 @@ require 'haml_coffee_assets/configuration'
 require 'haml_coffee_assets/compiler'
 require 'haml_coffee_assets/version'
 
-require 'haml_coffee_assets/tilt/template_handler'
+require 'haml_coffee_assets/transformer'
 
-if defined?(Rails) && Rails.version >= '3.0.0'
+if defined?(Rails) && Rails.version >= '7.0.0'
+  require 'rails'
+  require 'sprockets/railtie'
+  require 'haml_coffee_assets/rails/engine'
+  require 'haml_coffee_assets/action_view/patches'
+elsif defined?(Rails) && Rails.version >= '3.0.0'
   require 'rails'
   require 'haml_coffee_assets/rails/engine'
   require 'haml_coffee_assets/action_view/patches'
 else
   require 'sprockets/engines'
-  Sprockets.register_engine '.hamlc', ::HamlCoffeeAssets::Tilt::TemplateHandler
+  Sprockets.register_engine '.hamlc', ::HamlCoffeeAssets::Transformer
 end
 
 # Main Haml Coffee Assets module with
