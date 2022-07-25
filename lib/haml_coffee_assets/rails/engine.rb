@@ -59,10 +59,6 @@ module HamlCoffeeAssets
           end
         end
 
-        # Register Tilt template (for Sprockets)
-        configure_assets(app) do |env|
-          env.register_engine '.hamlc', ::HamlCoffeeAssets::Tilt::TemplateHandler
-        end
       end
 
     end
